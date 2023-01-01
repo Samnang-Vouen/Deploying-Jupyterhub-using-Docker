@@ -1,6 +1,6 @@
-## Deploying-Jupyterhub-using-Docker
+# Deploying-Jupyterhub-using-Docker
 Deployment Jupyter hub using Docker in VM which runs Ubuntu.
-# 1.Create Docker File:
+## 1.Create Docker File:
 *Write in Text Editor (for ubuntu only)
 ```
 # Get image
@@ -17,7 +17,7 @@ RUN python3 -m pip install -r requirements.txt && rm requirements.txt
 RUN useradd -m -d /home/admin -s /bin/bash -p $(openssl passwd -1 admin) admin
 ```
 
-# 2.Create docker-compose.yml file:
+## 2.Create docker-compose.yml file:
 *Write in Text Editor (for ubuntu only)
 ```
 version: "3.9"
@@ -33,12 +33,12 @@ services:
 volumes:
     data:
 ```
-# 3.Build the JupyterHub Docker image
+## 3.Build the JupyterHub Docker image
 Use docker-compose to build the JupyterHub Docker image:
 ```
 sudo docker-compose build
 ```
-# 4.Run JupyterHub
+## 4.Run JupyterHub
 To run the JupyterHub container
 ```
 sudo docker-compose up 

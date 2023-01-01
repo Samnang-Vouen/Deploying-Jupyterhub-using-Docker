@@ -51,3 +51,5 @@ To bring down the JupyterHub container:
 ```
 docker-compose down
 ```
+IP address of the virtual machine where Jupyter Hub is deployed:
+35.225.207.199
